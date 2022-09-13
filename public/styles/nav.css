@@ -1,0 +1,48 @@
+
+/* Styling the Navbar */
+
+.navLogo {
+  font-family: 'Bungee', sans-serif;
+}
+.navbar {
+  display: flex;
+  border-style: solid;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: space-between;
+  font-size: xx-large;
+  border-bottom-style: solid;
+  border-bottom-width: 0.25em;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-style: solid;
+  border-top-width: 0.25em;
+  border-bottom-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+  box-sizing: border-box;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top: 0px;
+}
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.95em;
+}
+
+.navWords {
+  font-size:large;
+}
+
+
+.fa-solid {
+  display: flex;
+  padding-top: 0.5em;
+}
