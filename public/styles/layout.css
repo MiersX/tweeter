@@ -19,6 +19,15 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: #545149;
+  background-color: #f4f1ec;
 }
 
 
