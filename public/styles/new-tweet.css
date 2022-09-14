@@ -22,10 +22,13 @@
 ::placeholder {
   color: #af76a1;
   opacity: 1;
-
 }
 
-.tweet-btn-and-counter {
+.limit {
+  color: #fd4b4b
+}
+
+.tweet-btn-and-ctr {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +36,6 @@
 }
 
 .counter {
-  display: flex;
   height: fit-content;
   font-family: 'Bungee', sans-serif;
 }
@@ -71,20 +73,3 @@
   background-color: #16437E;
   color: #ffffff;
 }
-/*
-
-<section class="new-tweet">
-<form method="POST" action="/tweets/" class="tweet-form">
-  <input name="text" id="tweet-text" placeholder="What are you humming about?"/>
-  <div class="tweet-btn-and-counter">
-    <button type="submit" id="tweet-button">Tweet</button>
-    <output name="counter" class="counter" for="tweet-text">140</output>
-  </div> 
-</form>
-</section>
-*/
-
-/*
- <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-
-*/
