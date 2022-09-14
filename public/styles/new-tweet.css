@@ -28,7 +28,8 @@
 .tweet-btn-and-counter {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  padding-top: .15em;
 }
 
 .counter {
