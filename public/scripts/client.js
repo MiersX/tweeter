@@ -34,9 +34,13 @@ $( document ).ready(function() {
 
   const createTweetElement = function(tweetData) {
 
+
+    // Declare the target and add a class of tweet to maintain css styling
+
   const $tweet = $(`<article>`).addClass('tweet');
 
- 
+    // Using literals to generate an html markup and integrate user/form data
+
   const htmlMarkup = `
   <header>
     <span class="avatar-and-name">
@@ -59,7 +63,8 @@ $( document ).ready(function() {
     return $tweet.html(htmlMarkup);
   }
 
-  
+  // Loops through the tweets database and appends each tweet to the tweet-container
+
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       $('.tweet-container').append(createTweetElement(tweet))
@@ -68,8 +73,12 @@ $( document ).ready(function() {
   
   renderTweets(data);
 
+  // Bind the submit listener to the tweet-form element -> Prevent default behaviour -> jQuery / ajax post request.
+  $('.tweet-form').submit(function(event) {
+    event.preventDefault();
 
-  $('.tweet-form')
+    $.post('/tweets', $(this).serialize());
+  });
 
 
 
