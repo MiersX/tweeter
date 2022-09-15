@@ -1,6 +1,9 @@
 .new-tweet {
   display: flex;
   align-items: flex-end;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
 }
 
 #tweet-text {

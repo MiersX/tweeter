@@ -1,0 +1,84 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border-top: solid .12em rgb(168, 161, 161);
+  border-bottom: solid .12em rgb(168, 161, 161);
+  border-right: solid .12em rgb(168, 161, 161);
+  border-left: solid .12em rgb(168, 161, 161);
+  width: 60vw;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  padding-top: 0.2em;
+
+}
+.tweet:hover {
+  box-shadow: 12px 12px 2px 1px rgba(233, 192, 216, 0.267);
+}
+
+
+.tweet header {
+  display: flex;
+  font-family: 'Source pro sans', sans-serif;
+  justify-content: space-between;
+  font-size: 0.6em;
+}
+
+.tweet p {
+  display: flex;
+  font-family: 'Source pro sans', sans-serif;
+  font-size: 0.75em;
+  padding-top: 0.5em;
+}
+
+.tweet footer {
+  display: flex;
+  font-family: 'Source pro sans', sans-serif;
+  justify-content: space-between;
+  font-size: 0.42em;
+  border-top: solid .12em rgba(168, 161, 161, 0.4);
+  padding-top: .5em;
+  padding-bottom: 0.8em;
+
+}
+.fa-user-astronaut {
+  font-size: 1.25em;
+}
+
+.footIcon {
+  font-size: 1.25em;
+}
+
+.fa-flag {
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.fa-flag:hover,
+.fa-flag:focus {
+  color: rgb(168, 161, 161);
+}
+.fa-crow {
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.fa-crow:hover,
+.fa-crow:focus {
+  color: rgb(168, 161, 161);
+}
+
+.fa-heart {
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.fa-heart:hover,
+.fa-heart:focus {
+  color: rgb(168, 161, 161);
+}
+
+.handle {
+  color:rgba(168, 161, 161, 0.8);
+}

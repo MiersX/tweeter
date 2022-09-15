@@ -42,7 +42,9 @@
 }
 
 
-.fa-solid {
+.fa-angles-down {
   display: flex;
   padding-top: 0.5em;
+  font-size: 0.55em;
+  color: rgb(168, 161, 161);
 }
