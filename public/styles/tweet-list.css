@@ -9,6 +9,8 @@
   padding-left: 0.25em;
   padding-right: 0.25em;
   padding-top: 0.2em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 
 }
 .tweet:hover {
@@ -46,6 +48,17 @@
 
 .footIcon {
   font-size: 1.25em;
+}
+
+.user-avatar {
+width: auto;
+height: 2em;
+padding-right: 0.3em;
+}
+
+.avatar-and-name {
+  display: flex;
+  align-items: center;
 }
 
 .fa-flag {
