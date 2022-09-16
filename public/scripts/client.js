@@ -6,8 +6,10 @@
 
 $( document ).ready(function() {
 
-  // Function to escape malicious or accidental code being evaluated.
+  // Hide the div-element containing the error-handling for the tweet submission form.
+  $("#error-message").hide();
 
+  // Function to escape malicious or accidental code being evaluated.
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -17,7 +19,6 @@ $( document ).ready(function() {
 
   const createTweetElement = function(tweetData) {
    
-
     // Declare the target and add a class of tweet to maintain css styling
 
   const $tweet = $(`<article>`).addClass('tweet');
@@ -62,21 +63,27 @@ $( document ).ready(function() {
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
 
-    const textField = $(this).find("textarea");
+    const $textField = $(this).find("textarea");
     const $userInput = $(this).find("textarea").val();
-    
+
+    // Find the error-message div in the DOM tree and hide it.
+    const $errMessage = $(this).find("#error-message");
+    $errMessage.slideUp("fast");
+
     // error handle if users tweet is over-limit or non-existant
     if ($userInput.length > 140) {
-      alert("The length of your tweet has exceeded the 140 character limit!");
+      $(".err-message").text("Oh dear! This tweet exceeds the 140 character limit.");
+      $errMessage.slideDown("fast");
       return;
     }
     if (!$userInput ) {
-      alert("You can't submit an empty tweet!");
+      $(".err-message").text("An empty tweet? That doesn't fly. Start chirping!");
+      $errMessage.slideDown("fast");
       return;
     }
     // Sends the form elements as a url-encoded string. 
     // Success callback loads tweets, and resets the text-box and char-counter.
-    $.post('/tweets', $(this).serialize(), () => {loadTweets(); textField.val(""); $(".counter").text("140");})
+    $.post('/tweets', $(this).serialize(), () => {loadTweets(); $textField.val(""); $(".counter").text("140");})
   });
 
   // Makes an ajax GET request. Calls the renderTweets as a callback on success.
