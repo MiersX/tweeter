@@ -56,6 +56,7 @@
         <i class="fa-solid fa-angles-down" ></i>
       </div>
     </nav>
+    <!-- Header w/ Avatar image + name-->
   <header class="header">
     <div class="avatarImage">
         <img src="/images/profile-hex.png"> 
@@ -74,9 +75,15 @@
             <button type="submit" id="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div> 
+          <!-- Error handling -->
+          <div id="error-message" role="alert" aria-live="assertive" class="hidden">
+            <p>Error Text</p>
+          </div>
         </form>
       </section>
+      <!-- Tweets container-->
       <section class="tweet-container">
+        <!-- HTML generated dynamically into article tags-->
         <article> 
         </article>
       </section>
