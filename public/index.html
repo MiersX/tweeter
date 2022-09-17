@@ -4,6 +4,8 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -45,7 +47,7 @@
 
   </head>
 
-  <body>
+  <body class="body">
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
       <!-- Logo-->
@@ -57,7 +59,7 @@
       </div>
     </nav>
     <!-- Header w/ Avatar image + name-->
-  <header class="header">
+  <header class="header" id="header-container">
     <div class="avatarImage">
         <img src="/images/profile-hex.png"> 
     </div>
@@ -67,7 +69,7 @@
     </div>
   </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="main-container">
       <section class="new-tweet">
         <form method="POST" action="/tweets/" class="tweet-form">
           <textarea name="text" id="tweet-text" height="1em" rows="1" cols="50" wrap="physical" placeholder="What are you humming about?"></textarea>

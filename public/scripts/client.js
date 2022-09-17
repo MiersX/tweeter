@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+
+
 $( document ).ready(function() {
 
   // Hide the div-element containing the error-handling for the tweet submission form.
@@ -19,9 +22,10 @@ $( document ).ready(function() {
 
   const createTweetElement = function(tweetData) {
    
-    // Declare the target and add a class of tweet to maintain css styling
-
-  const $tweet = $(`<article>`).addClass('tweet');
+    // Declare the article element target and add a class of tweet to maintain css styling
+    const $tweet = $(`<article>`).addClass('tweet');
+    const time =  timeago.format(tweetData.created_at);
+    
 
     // Using literals to generate an html markup and integrate user/form data. Escaped from all instances where users could add script.
   
@@ -35,7 +39,7 @@ $( document ).ready(function() {
   </header>
   <p>${escape(tweetData.content.text)}</p>
   <footer>
-    <span>${escape(tweetData.created_at)}</span>
+    <span>${escape(time)}</span>
     <span class="footIcon">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-crow"></i>
@@ -68,17 +72,17 @@ $( document ).ready(function() {
 
     // Find the error-message div in the DOM tree and hide it.
     const $errMessage = $(this).find("#error-message");
-    $errMessage.slideUp("fast");
+    $errMessage.slideUp(5);
 
     // error handle if users tweet is over-limit or non-existant
     if ($userInput.length > 140) {
       $(".err-message").text("Oh dear! This tweet exceeds the 140 character limit.");
-      $errMessage.slideDown("fast");
+      $errMessage.slideDown(400);
       return;
     }
     if (!$userInput ) {
       $(".err-message").text("An empty tweet? That doesn't fly. Start chirping!");
-      $errMessage.slideDown("fast");
+      $errMessage.slideDown(400);
       return;
     }
     // Sends the form elements as a url-encoded string. 

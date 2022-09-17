@@ -20,6 +20,7 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
@@ -34,7 +35,24 @@ main {
   flex-direction: column;
 }
 
+/* Responsive layout */
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (min-width: 1024px) {
+
+
+  .body {
+    display: flex;
+
+  }
+
+  #header-container {
+   margin-left: 1.2em;
+   margin-top: 6em;
+   height: fit-content;
+  }
+
+  #main-container {
+   margin-top: 5em;
+
+  }
+}
