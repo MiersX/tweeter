@@ -1,4 +1,4 @@
-/* Styling the header */
+/* Styling the header, Avatar, and user's name */
 
 .header {
   display: flex;
@@ -11,6 +11,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 
 }
+
 
 .avatarImage {
   display: flex;

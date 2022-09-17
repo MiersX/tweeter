@@ -1,3 +1,5 @@
+/* Styling the tweet entry field, button, and icon */
+
 .new-tweet {
   display: flex;
   align-items: flex-end;
@@ -23,6 +25,7 @@
   opacity: 1;
 }
 
+/* The toggling class for the counter if it exceeds 140 characters */
 .limit {
   color: #fd4b4b
 }

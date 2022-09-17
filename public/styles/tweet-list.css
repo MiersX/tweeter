@@ -1,3 +1,4 @@
+/* Styling the displayed tweets, the users avatars, names, and icons*/
 .tweet {
   display: flex;
   flex-direction: column;
