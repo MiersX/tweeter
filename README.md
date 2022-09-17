@@ -10,6 +10,10 @@ Tweeter is a simple, single-page Twitter clone.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Screenshots
+
+!["Screenshot of tweeter mobile view"](https://github.com/MiersX/tweeter/blob/master/docs/Tweeter-Mobile-View.png?raw=true)
+!["Screenshot of tweeter desktop view"](https://github.com/MiersX/tweeter/blob/master/docs/Tweeter-Desktop-View.png?raw=true)
 ## Dependencies
 
 - Express
